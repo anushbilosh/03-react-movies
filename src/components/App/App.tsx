@@ -1,6 +1,6 @@
 import toast from "react-hot-toast";
 import { fetchMovies } from "../../services/movieService";
-import type { Movie } from "../../types/movies";
+import type { Movie } from "../../types/movie";
 import css from "./App.module.css";
 import { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
@@ -19,7 +19,7 @@ export default function App() {
     try {
       setIsLoading(true);
       setHasError(false);
-      setMovies([]); 
+      setMovies([]);
 
       const results = await fetchMovies(query);
 
